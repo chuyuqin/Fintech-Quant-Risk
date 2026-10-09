@@ -1,0 +1,10 @@
+,model,pair,lower,upper
+0,Observed ranks,X1-X2,6.0,8.0
+1,Observed ranks,X1-X3,7.0,12.0
+2,Observed ranks,X2-X3,6.0,9.0
+3,Gaussian,X1-X2,5.98,6.08
+4,Gaussian,X1-X3,4.68,5.28
+5,Gaussian,X2-X3,3.89,4.44
+6,t,X1-X2,9.24,9.56
+7,t,X1-X3,8.040000000000001,8.27
+8,t,X2-X3,7.3500000000000005,7.65

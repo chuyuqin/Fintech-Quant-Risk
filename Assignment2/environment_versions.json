@@ -1,0 +1,11 @@
+{
+  "python": "3.12.8",
+  "numpy": "1.26.4",
+  "pandas": "3.0.1",
+  "scipy": "1.17.1",
+  "matplotlib": "3.10.8",
+  "seed_copulas": 5452026,
+  "seed_regression": 5452031,
+  "simulation_days": 100000,
+  "reportlab": "4.4.9"
+}

@@ -1,0 +1,441 @@
+{
+  "p1": {
+    "complete_rows": 81,
+    "summary": [
+      {
+        "matrix": "Complete case",
+        "min_eigenvalue": 0.0015057870958391482,
+        "frobenius_to_pair": 0.42393473640179274,
+        "tracking_variance": 1.0975452996003371e-06,
+        "cholesky": "success"
+      },
+      {
+        "matrix": "Pairwise",
+        "min_eigenvalue": -0.011071847433540978,
+        "frobenius_to_pair": 0.0,
+        "tracking_variance": -1.7993696550689532e-06,
+        "cholesky": "failure"
+      },
+      {
+        "matrix": "Rebonato-Jackel",
+        "min_eigenvalue": 3.5868737197165824e-17,
+        "frobenius_to_pair": 0.01618210010677491,
+        "tracking_variance": 6.807297706741375e-07,
+        "cholesky": "failure"
+      },
+      {
+        "matrix": "Higham",
+        "min_eigenvalue": -2.0951898201683004e-13,
+        "frobenius_to_pair": 0.015520003132000217,
+        "tracking_variance": 6.787649476333862e-07,
+        "cholesky": "failure"
+      }
+    ],
+    "estimator_gap": 0.42393473640179274,
+    "changes": [
+      {
+        "pair": "A-B",
+        "change": 0.0019972235117454162,
+        "observations": 242
+      },
+      {
+        "pair": "A-C",
+        "change": 0.002276850753349713,
+        "observations": 221
+      },
+      {
+        "pair": "A-D",
+        "change": 0.0017809709504136295,
+        "observations": 93
+      },
+      {
+        "pair": "A-IDX",
+        "change": -0.0070446348830000005,
+        "observations": 242
+      },
+      {
+        "pair": "B-C",
+        "change": 0.0013509552904481525,
+        "observations": 221
+      },
+      {
+        "pair": "B-D",
+        "change": 0.0010567280811245583,
+        "observations": 93
+      },
+      {
+        "pair": "B-IDX",
+        "change": -0.0041798904695253825,
+        "observations": 242
+      },
+      {
+        "pair": "C-D",
+        "change": 0.0012046784515828413,
+        "observations": 83
+      },
+      {
+        "pair": "C-IDX",
+        "change": -0.0047651085161426465,
+        "observations": 228
+      },
+      {
+        "pair": "D-IDX",
+        "change": -0.003727306161958155,
+        "observations": 96
+      }
+    ]
+  },
+  "p2": {
+    "moments": {
+      "mean": -2.220446049250313e-19,
+      "variance": 0.00014189813094424568,
+      "skewness": -0.1555865006522851,
+      "excess_kurtosis": 2.132366887286768
+    },
+    "raw_mean": 0.00016187615348274152,
+    "var": [
+      {
+        "method": "Normal equal",
+        "sd": 0.011912100190321004,
+        "VaR": 19593.661202658834
+      },
+      {
+        "method": "Normal EW 0.97",
+        "sd": 0.020709285722475435,
+        "VaR": 34063.74373218807
+      },
+      {
+        "method": "Normal EW 0.94",
+        "sd": 0.0220736676763431,
+        "VaR": 36307.95233755444
+      },
+      {
+        "method": "Student t MLE",
+        "sd": 0.011817741373750747,
+        "VaR": 18872.454676134083
+      },
+      {
+        "method": "Historical",
+        "sd": null,
+        "VaR": 20574.462894980672
+      }
+    ],
+    "ew": [
+      {
+        "lam": 0.97,
+        "n_eff": 65.66663473349944,
+        "half_life": 22.75657306277341,
+        "recent40_weight": 0.7042878838456508,
+        "sd": 0.020709285722475435,
+        "sd_se": 0.0018070815093464948,
+        "VaR_se": 2972.3845748455237
+      },
+      {
+        "lam": 0.94,
+        "n_eff": 32.33333333333093,
+        "half_life": 11.202305583621158,
+        "recent40_weight": 0.9158383688566079,
+        "sd": 0.0220736676763431,
+        "sd_se": 0.002744948888842146,
+        "VaR_se": 4515.039135608418
+      }
+    ],
+    "t": {
+      "family": "t",
+      "mu": 0.00018162209485538837,
+      "scale": 0.010289993067639372,
+      "nu": 8.269950468095995,
+      "k": 3,
+      "ll": 1516.6915556498045,
+      "AICc": -3027.334724202835,
+      "BIC": -3014.7392870043423
+    },
+    "regimes": [
+      {
+        "regime": "Days 1-460",
+        "n": 460,
+        "sd": 0.010177831528364673
+      },
+      {
+        "regime": "Days 461-500",
+        "n": 40,
+        "sd": 0.024289077585391863
+      }
+    ]
+  },
+  "p3": {
+    "counts": {
+      "A": 406,
+      "B": 393,
+      "either": 782,
+      "both": 17
+    },
+    "risk": [
+      {
+        "position": "$1m A",
+        "VaR5": -84530.6751069361,
+        "ES5": 443628.3008571366,
+        "normal_VaR5": 139970.61765174463,
+        "VaR1": 650545.1253710206,
+        "ES1": 709547.775672156
+      },
+      {
+        "position": "$1m B",
+        "VaR5": -86011.2118462348,
+        "ES5": 419587.28612943867,
+        "normal_VaR5": 132276.77057141025,
+        "VaR1": 641248.0874004106,
+        "ES1": 700805.3427307766
+      },
+      {
+        "position": "$2m A",
+        "VaR5": -169061.3502138722,
+        "ES5": 887256.6017142732,
+        "normal_VaR5": 279941.23530348926,
+        "VaR1": 1301090.2507420413,
+        "ES1": 1419095.551344312
+      },
+      {
+        "position": "$1m A + $1m B",
+        "VaR5": 414766.8540679471,
+        "ES5": 541997.2387029593,
+        "normal_VaR5": 143466.25135513715,
+        "VaR1": 598237.1485446425,
+        "ES1": 716407.692642206
+      }
+    ]
+  },
+  "p4": {
+    "nu": 3.6599314171740915,
+    "comparison": [
+      {
+        "model": "Gaussian",
+        "ll": 350.4402865188804,
+        "k": 0,
+        "nu": null,
+        "AICc": -700.8805730377608,
+        "BIC": -700.8805730377608
+      },
+      {
+        "model": "t",
+        "ll": 451.99944381709105,
+        "k": 1,
+        "nu": 3.6599314171740915,
+        "AICc": -901.99487961815,
+        "BIC": -897.0911323552
+      }
+    ],
+    "risk": [
+      {
+        "model": "Gaussian",
+        "VaR5": 49924.50344073222,
+        "ES5": 67063.61229583104,
+        "VaR1": 77003.27573650103,
+        "ES1": 95021.57452743727
+      },
+      {
+        "model": "t",
+        "VaR5": 49234.44744339123,
+        "ES5": 68183.8474448035,
+        "VaR1": 78697.55949354218,
+        "ES1": 100996.97880596486
+      },
+      {
+        "model": "Historical",
+        "VaR5": 47939.1935651478,
+        "ES5": 65698.8044745141,
+        "VaR1": 70091.995956422,
+        "ES1": 102424.22374875468
+      }
+    ],
+    "tail": [
+      {
+        "model": "Observed ranks",
+        "pair": "X1-X2",
+        "lower": 6.0,
+        "upper": 8.0
+      },
+      {
+        "model": "Observed ranks",
+        "pair": "X1-X3",
+        "lower": 7.0,
+        "upper": 12.0
+      },
+      {
+        "model": "Observed ranks",
+        "pair": "X2-X3",
+        "lower": 6.0,
+        "upper": 9.0
+      },
+      {
+        "model": "Gaussian",
+        "pair": "X1-X2",
+        "lower": 5.98,
+        "upper": 6.08
+      },
+      {
+        "model": "Gaussian",
+        "pair": "X1-X3",
+        "lower": 4.68,
+        "upper": 5.28
+      },
+      {
+        "model": "Gaussian",
+        "pair": "X2-X3",
+        "lower": 3.89,
+        "upper": 4.44
+      },
+      {
+        "model": "t",
+        "pair": "X1-X2",
+        "lower": 9.24,
+        "upper": 9.56
+      },
+      {
+        "model": "t",
+        "pair": "X1-X3",
+        "lower": 8.040000000000001,
+        "upper": 8.27
+      },
+      {
+        "model": "t",
+        "pair": "X2-X3",
+        "lower": 7.3500000000000005,
+        "upper": 7.65
+      }
+    ],
+    "central_days": 784,
+    "central_gain": 49.8003398374251,
+    "total_gain": 101.55915729821068,
+    "central_fraction": 0.4903579466615218,
+    "fitted_central_days": 793,
+    "fitted_central_gain": 50.477952686398766,
+    "tail_pair": "X1-X2",
+    "rho": 0.5832628140317476,
+    "tail_dependence": 0.3219423658042292,
+    "margin_fits": [
+      {
+        "asset": "X1",
+        "selected": true,
+        "family": "normal",
+        "mu": 0.0002565849819167245,
+        "scale": 0.01188815434685648,
+        "nu": null,
+        "k": 2,
+        "ll": 3013.27427446975,
+        "AICc": -6022.536512831175,
+        "BIC": -6012.733038381535
+      },
+      {
+        "asset": "X1",
+        "selected": false,
+        "family": "t",
+        "mu": 0.0002565846941021441,
+        "scale": 0.011888154136978009,
+        "nu": 2551657177389.8784,
+        "k": 3,
+        "ll": 3013.2742744697384,
+        "AICc": -6020.524452553935,
+        "BIC": -6005.82528310253
+      },
+      {
+        "asset": "X2",
+        "selected": false,
+        "family": "normal",
+        "mu": -0.0002523809385968372,
+        "scale": 0.01616039845621555,
+        "nu": null,
+        "k": 2,
+        "ll": 2706.2530360444603,
+        "AICc": -5408.494035980596,
+        "BIC": -5398.690561530956
+      },
+      {
+        "asset": "X2",
+        "selected": true,
+        "family": "t",
+        "mu": -0.0001759599461856981,
+        "scale": 0.012543984748252086,
+        "nu": 5.2714939025729635,
+        "k": 3,
+        "ll": 2762.1044275257163,
+        "AICc": -5518.1847586658905,
+        "BIC": -5503.485589214486
+      },
+      {
+        "asset": "X3",
+        "selected": false,
+        "family": "normal",
+        "mu": 0.0008897999284201763,
+        "scale": 0.010013809678214188,
+        "nu": null,
+        "k": 2,
+        "ll": 3184.8516376211014,
+        "AICc": -6365.691239133878,
+        "BIC": -6355.887764684238
+      },
+      {
+        "asset": "X3",
+        "selected": true,
+        "family": "t",
+        "mu": 0.0007455900610510266,
+        "scale": 0.008180763412308265,
+        "nu": 6.094919066067403,
+        "k": 3,
+        "ll": 3217.0198066314524,
+        "AICc": -6428.015516877363,
+        "BIC": -6413.316347425958
+      }
+    ]
+  },
+  "p5": {
+    "regressions": [
+      {
+        "asset": "A",
+        "alpha": 0.00020501260562239118,
+        "beta": 1.0352779580992266,
+        "residual_sd": 0.012888300301826715,
+        "regression_residual_se": 0.012901233872870317
+      },
+      {
+        "asset": "B",
+        "alpha": 0.00031477259561914765,
+        "beta": 0.935417205822503,
+        "residual_sd": 0.011538442248535235,
+        "regression_residual_se": 0.011550021220087659
+      }
+    ],
+    "residual_correlation": 0.6983069893066779,
+    "covariance_max_error": 1.0842021724855044e-19,
+    "risk": [
+      {
+        "assumption": "Full residual",
+        "portfolio": "P1",
+        "simulated_VaR": 50349.92921563578,
+        "analytic_VaR": 50414.619217456275,
+        "delta_normal_VaR": 50414.61921745628
+      },
+      {
+        "assumption": "Full residual",
+        "portfolio": "P2",
+        "simulated_VaR": 15859.718566955095,
+        "analytic_VaR": 15833.602246029477,
+        "delta_normal_VaR": 15833.602246029472
+      },
+      {
+        "assumption": "Independent residual",
+        "portfolio": "P1",
+        "simulated_VaR": 44384.51984872904,
+        "analytic_VaR": 44493.9863325897,
+        "delta_normal_VaR": 50414.61921745628
+      },
+      {
+        "assumption": "Independent residual",
+        "portfolio": "P2",
+        "simulated_VaR": 28473.63177758466,
+        "analytic_VaR": 28506.52506290273,
+        "delta_normal_VaR": 15833.602246029472
+      }
+    ]
+  }
+}
