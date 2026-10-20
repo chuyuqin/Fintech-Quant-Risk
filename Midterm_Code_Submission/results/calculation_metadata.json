@@ -1,0 +1,181 @@
+{
+  "analysis_script": "solve_midterm.py",
+  "input_directory": "data",
+  "output_directory": "results",
+  "python_version": "3.12.8",
+  "python_executable": "/Users/qinchuyu/duke533-venv/bin/python",
+  "package_versions": {
+    "numpy": "1.26.4",
+    "pandas": "3.0.1",
+    "scipy": "1.17.1"
+  },
+  "simulation": {
+    "seed": 5452025,
+    "generator": "numpy.random.default_rng",
+    "draw_count": 100000,
+    "batch_count": 10,
+    "draws_per_batch": 10000,
+    "batch_method": "Consecutive slices of the existing simulation"
+  },
+  "conventions": {
+    "general": {
+      "returns": "Daily arithmetic returns; no demeaning",
+      "price_row_order": "Supplied chronological order",
+      "data_files": "Separate input file for each problem",
+      "sample_covariance_ddof": 1,
+      "descriptive_variance_ddof": 1,
+      "normal_MLE_scale_ddof": 0
+    },
+    "problem1": {
+      "variances": "Full available history of each column",
+      "correlations": "Pairwise-complete observations",
+      "repair": "Unweighted Higham alternating projections with Dykstra correction",
+      "eigenvalue_tolerance": 1e-12,
+      "objective": "0.5 * squared Frobenius distance",
+      "objective_change_tolerance": 1e-14,
+      "maximum_iterations": 10000,
+      "covariance": "diag(full-history sample SD) @ repaired R @ diag(SD)"
+    },
+    "problem2": {
+      "regression": "XYZ on an intercept and SPY, using OLS",
+      "residual_variance_denominator": "n - 1",
+      "market_variance_denominator": "n - 1",
+      "mu": "alpha + beta * SPY sample mean",
+      "sigma_squared": "beta**2 * market variance + residual variance",
+      "confidence_levels": [
+        0.95,
+        0.99
+      ],
+      "VaR_percent": "100 * (-mu - sigma * norm.ppf(1-confidence))",
+      "ES_percent": "100 * (-mu + sigma * norm.pdf(z)/(1-confidence))"
+    },
+    "problem3": {
+      "margin_estimation": "Maximum likelihood on standardized returns",
+      "parameter_units": "Location and scale converted back to return units",
+      "parameter_counts": {
+        "normal": 2,
+        "student_t": 3,
+        "NIG": 4
+      },
+      "n": "Number of returns, not prices",
+      "AIC": "-2*ll + 2*k",
+      "AICc": "-2*ll + 2*k + 2*k*(k+1)/(n-k-1)",
+      "BIC": "-2*ll + k*log(n)",
+      "supplied_margins": {
+        "S1": "normal",
+        "S2": "student_t",
+        "S3": "NIG",
+        "S4": "normal",
+        "S5": "student_t",
+        "S6": "NIG",
+        "S7": "normal",
+        "S8": "student_t",
+        "S9": "NIG",
+        "S10": "student_t"
+      },
+      "NIG_optimizer": {
+        "method": "Nelder-Mead",
+        "maxiter": 8000,
+        "xatol": 1e-08,
+        "fatol": 1e-08,
+        "theta0_bounds": [
+          -8,
+          9.210340371976184
+        ],
+        "b_bounds": [
+          -10000,
+          10000
+        ],
+        "loc_bounds": [
+          -100,
+          100
+        ],
+        "log_scale_bounds": [
+          -8,
+          8
+        ],
+        "starting_a": [
+          0.5,
+          2,
+          10,
+          50
+        ],
+        "starting_b_over_a": [
+          -0.5,
+          0,
+          0.5
+        ],
+        "start_moments": "Mean 0 and variance 1",
+        "retention": "Highest likelihood among converged fits"
+      },
+      "copula_R": "sin(pi * Kendall tau / 2), diagonal 1; fixed for both copulas",
+      "conditional_copula_parameter_counts": {
+        "Gaussian": 0,
+        "Student-t": 1
+      },
+      "t_copula_df_bounds": [
+        2,
+        100
+      ],
+      "reciprocal_df_grid": {
+        "start": 0.01,
+        "stop": 0.5,
+        "count": 100
+      },
+      "profile_refinement": "Bounded refinement around grid maximum; compare endpoints",
+      "supplied_simulation_copula": "Gaussian",
+      "normal_draw_transform": "Independent standard normals @ cholesky(R).T",
+      "uniform_transform": "norm.cdf",
+      "NIG_inverse": "scipy.stats.sampling.NumericalInversePolynomial",
+      "NIG_u_resolution": 1e-12,
+      "NIG_inversion_check": {
+        "grid_start": 1e-06,
+        "grid_stop": 0.999999,
+        "grid_count": 1001,
+        "maximum_error_strictly_below": 1e-08
+      },
+      "valuation": "Shares times last price, matched by stock name",
+      "position_PnL": "Simulated arithmetic return times current position value",
+      "aggregate_PnL": "Sum position P&Ls within each draw",
+      "confidence": 0.95,
+      "VaR": "Negative 5,000th sorted P&L for 100,000 draws",
+      "ES": "Negative average of worst 5,000 P&Ls",
+      "batch_VaR": "Negative 500th sorted P&L for 10,000 draws",
+      "batch_ES": "Negative average of worst 500 P&Ls",
+      "historical_VaR_convention": "Inverse empirical CDF",
+      "ES_probability_mass": "Exactly worst 5%, with fractional boundary weight if needed"
+    }
+  },
+  "csv_files": [
+    "problem1a_pairwise_counts.csv",
+    "problem1a_correlation.csv",
+    "problem1b_column_statistics.csv",
+    "problem1c_correlation_eigenvalues.csv",
+    "problem1c_numerical_checks.csv",
+    "problem1d_repaired_correlation.csv",
+    "problem1d_repaired_correlation_eigenvalues.csv",
+    "problem1d_correlation_changes.csv",
+    "problem1d_off_diagonal_changes.csv",
+    "problem1d_repair_metrics.csv",
+    "problem1e_repaired_covariance.csv",
+    "problem1e_repaired_covariance_eigenvalues.csv",
+    "problem2a_regression_estimates.csv",
+    "problem2b_percentage_risk.csv",
+    "problem3a_fitted_parameters.csv",
+    "problem3a_information_criteria.csv",
+    "problem3a_candidate_gaps.csv",
+    "problem3a_NIG_diagnostics.csv",
+    "problem3b_kendall_tau.csv",
+    "problem3b_copula_R.csv",
+    "problem3b_copula_R_eigenvalues.csv",
+    "problem3b_copula_criteria.csv",
+    "problem3b_t_copula_profile.csv",
+    "problem3b_t_copula_requested_nu.csv",
+    "problem3b_extended_sensitivity.csv",
+    "problem3c_inverse_cdf_checks.csv",
+    "problem3c_position_values.csv",
+    "problem3c_position_dollar_risk.csv",
+    "problem3c_aggregate_dollar_risk.csv",
+    "problem3c_batch_dollar_risk.csv"
+  ]
+}

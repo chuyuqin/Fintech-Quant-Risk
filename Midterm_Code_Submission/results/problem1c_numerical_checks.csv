@@ -1,0 +1,2 @@
+absolute_tolerance,relative_tolerance,smallest_eigenvalue,symmetry_max_error,unit_diagonal_max_error
+1e-10,0,0.38204575461434548,0,0
