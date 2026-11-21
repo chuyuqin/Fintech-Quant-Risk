@@ -1,0 +1,26 @@
+Case,Status,Calculated output,Reference,Max absolute error,Comparison
+8.1,PASS,actual_8.1.csv,testout8_1.csv,2.7755575615628914e-17,deterministic
+8.2,PASS,actual_8.2.csv,testout8_2.csv,8.595543027345443e-10,deterministic
+8.3,PASS,actual_8.3.csv,testout8_3.csv,0.005913762462701373,six combined asymptotic sampling standard errors
+8.4,PASS,actual_8.4.csv,testout8_4.csv,7.428016535193649e-12,deterministic
+8.5,PASS,actual_8.5.csv,testout8_5.csv,2.526875625408209e-09,deterministic
+8.6,PASS,actual_8.6.csv,testout8_6.csv,0.011521918726282207,six combined asymptotic sampling standard errors
+9.1,PASS,actual_9.1.csv,testout9_1.csv,2.6335100537270364,independent Monte Carlo
+10.1,PASS,actual_10.1.csv,testout10_1.csv,6.233362737084747e-08,deterministic
+10.2,PASS,actual_10.2.csv,testout10_2.csv,2.5674633863381757e-08,deterministic
+10.3,PASS,actual_10.3.csv,testout10_3.csv,1.2482150446579965e-07,deterministic
+10.4,PASS,actual_10.4.csv,testout10_4.csv,2.002533458500544e-08,deterministic
+11.1,PASS,actual_11.1.csv,testout11_1.csv,3.469446951953614e-16,deterministic
+11.2,PASS,actual_11.2.csv,testout11_2.csv,1.0824674490095276e-15,deterministic
+12.1,PASS,actual_12.1.csv,testout12_1.csv,1.7763568394002505e-15,deterministic
+12.2,PASS,actual_12.2.csv,testout12_2.csv,8.083943825454298e-08,deterministic
+12.3,PASS,actual_12.3.csv,testout12_3.csv,1.2434497875801753e-12,deterministic
+13.1,PASS,actual_13.1.csv,testout13_1.csv,1.6653345369377348e-16,deterministic
+13.2,PASS,actual_13.2.csv,testout13_2.csv,6.505213034913027e-17,deterministic
+13.3,PASS,actual_13.3.csv,testout13_3.csv,7.868597266813548e-17,deterministic
+13.4,PASS,actual_13.4.csv,testout13_4.csv,5.002220859751105e-12,deterministic
+13.5,PASS,actual_13.5.csv,testout13_5.csv,6.896630111441482e-08,deterministic
+13.6,PASS,actual_13.6.csv,testout13_6.csv,1.3899193618271966e-07,deterministic
+13.7,PASS,actual_13.7.csv,testout13_7.csv,2.779838723654393e-07,deterministic
+13.8,PASS,actual_13.8.csv,testout13_8.csv,2.498001805406602e-16,deterministic
+13.9,PASS,actual_13.9.csv,testout13_9.csv,2.4628373769353686,independent Monte Carlo
